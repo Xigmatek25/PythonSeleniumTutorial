@@ -22,12 +22,12 @@ class Calculator:
     def getData(self):
         print("I am now executing")
 
-
+                 
 #obj = Calculator()
 #obj.getData()
 #print(obj.num)
 
-tryObj = Calculator(5, 2)
+#tryObj = Calculator(5, 2)
 
 print(tryObj.addNumbers())
 print(tryObj.subNumbers())
