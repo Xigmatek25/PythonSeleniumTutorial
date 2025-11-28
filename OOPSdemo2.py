@@ -5,7 +5,7 @@ class Calculator:
     num = 100       #class variables
 
     def __init__(self, num1, num2): #instance variables
-        print("I ama initialized")
+        print("I am initialized")
         self.num1 = num1
         self.num2 = num2
 
@@ -26,9 +26,9 @@ class Calculator:
 #obj = Calculator()
 #obj.getData()
 #print(obj.num)
+if __name__=="__main__":
+    tryObj = Calculator(5, 2)
 
-#tryObj = Calculator(5, 2)
-
-print(tryObj.addNumbers())
-print(tryObj.subNumbers())
-print(tryObj.addNumWithClssVriable())
+    print(tryObj.addNumbers())
+    print(tryObj.subNumbers())
+    print(tryObj.addNumWithClssVriable())
