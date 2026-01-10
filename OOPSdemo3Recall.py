@@ -41,6 +41,9 @@ exObj = Calculator(6, 5, 9)
 
 print(exObj.getExponent())
 
+example2 = Calculator(8,7,3)
+
+print(example2.getExponent())
 
 
 
