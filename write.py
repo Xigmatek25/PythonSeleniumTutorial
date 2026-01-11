@@ -9,3 +9,7 @@ with open('test.txt', 'r') as reader:
     with open('test.txt', 'w') as writer:
         for line in reversed(lines):
             writer.write(line)
+
+
+
+
