@@ -26,7 +26,7 @@ driver.find_element(By.XPATH, "//input[@type='submit']").click()
 message = driver.find_element(By.CLASS_NAME, "alert-dismissible").text
 print(message)
 
-assert "Success!" in message
+assert "Success" in message
 
 #CSSSelector - "tagname[attribute = 'value']"
 
