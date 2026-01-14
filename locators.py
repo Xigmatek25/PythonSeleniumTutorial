@@ -35,3 +35,9 @@ assert "Success" in message
 
 
 time.sleep(2)
+
+#XPATH - "//tagname[@attribute = 'value']"
+
+# "//tagname[@attribute = '']"
+
+# "tagname[attribute = 'value']"

@@ -26,27 +26,24 @@ Expected Result:
 Cannot add a negative number of items.
 """
 
-ItemsInCart1 = 0
+ItemsInCarts = 0
 
 def add_to_cart(items_to_add):
-
 
     if items_to_add < 0:
         raise Exception("Cannot add a negative number of items.")
 
     else:
-        global ItemsInCart1
-
-        if ItemsInCart1 + items_to_add > 5:
+        global ItemsInCarts
+        if items_to_add + ItemsInCarts >5:
             raise Exception("Cart limit exceeded.")
         else:
-            ItemsInCart1 = ItemsInCart1 + items_to_add
-            print(str(items_to_add) + " items added. " + "Total in cart: " + str(ItemsInCart1))
+            ItemsinCarts = items_to_add + ItemsInCarts
+            print(str(items_to_add) + " items added. Total in cart: " + str(ItemsInCarts))
 
 try:
     add_to_cart(2)
     add_to_cart(-1)
-    add_to_cart(5)
 
 except Exception as e:
     print(e)
