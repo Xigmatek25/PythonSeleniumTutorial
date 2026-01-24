@@ -25,16 +25,19 @@ submit_button_name = driver.find_element(By.CLASS_NAME, "btn")
 label = submit_button_name.get_attribute("value")
 print(label)
 try:
-    assert label == "Submit"
+    assert label == "Done"
     print("PASSED")
 except AssertionError:
-    print("FAILED: Expected 'Submit!' but got " + str(label))
+    print("FAILED: Expected 'Done' but got " + str(label))
 
 response = driver.find_element(By.CLASS_NAME, "alert-success").text
-print(response)
+print("Submit message: " + str(response))
 
 assert "Success!" in response
 #driver.find_element(By.)
+
+# Xpath = //tagname[@attribute = 'value']
+# CSS = tagname[attribute = 'value']
 
 
 time.sleep(3)

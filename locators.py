@@ -28,10 +28,12 @@ print(message)
 
 assert "Success" in message
 
-#CSSSelector - "tagname[attribute = 'value']"
+title = driver.title
+print(title)
+
+#CSSSelector - "tagname[attribute = 'value']", #id, .className 
 
 #Xpath - "//tagname[@attribute = 'value']"
-
 
 
 time.sleep(2)
