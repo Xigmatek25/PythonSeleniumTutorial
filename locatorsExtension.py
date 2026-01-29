@@ -14,7 +14,7 @@ class forgotPasswordTest:
 
     def setUpDriver(self):
         self.driver = webdriver.Chrome()
-        print("✅Web Driver initialized")
+        print("✅ Web Driver initialized")
 
     def closeDriver(self):
 
@@ -40,6 +40,26 @@ class forgotPasswordTest:
         except Exception as e:
             print("❌ expected forgot password page did not open")
 
+    def inputEmailandPassword(self):
+
+        try:
+
+            test_email = "testemail@example.com"
+            test_pw = ("123@abc"
+                       "")
+            email_input = self.driver.find_element(By.CSS_SELECTOR, "input[type = 'email']")
+            email_input.clear()
+            email_input.send_keys(test_email)
+
+            entered_email = email_input.get_attribute("value")
+
+            assert entered_email == test_email, f"Expected `{test_email}`, got '{entered_email}'"
+            print("✅ email input successful")
+
+        except Exception as e:
+            print(f"❌ Input text test failed: {e}")
+
+
     def run_all_tests(self):
         """Run all tests in sequence"""
         print("🚀 Starting Selenium automation tests for forgot password page...")
@@ -52,6 +72,10 @@ class forgotPasswordTest:
             self.clickingForgotPW()
             print("-" *60)
 
+            self.inputEmailandPassword()
+            print("-" * 60)
+
+
         except Exception as e:
             print(f"💥 Test suite failed: {e}")
 
@@ -60,6 +84,7 @@ class forgotPasswordTest:
 
 
 test_runner = forgotPasswordTest()
+
 test_runner.run_all_tests()
 
 
