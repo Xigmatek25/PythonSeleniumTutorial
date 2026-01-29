@@ -40,13 +40,12 @@ class forgotPasswordTest:
         except Exception as e:
             print("❌ expected forgot password page did not open")
 
-    def inputEmailandPassword(self):
+    def inputEmail(self):
 
         try:
 
             test_email = "testemail@example.com"
-            test_pw = ("123@abc"
-                       "")
+
             email_input = self.driver.find_element(By.CSS_SELECTOR, "input[type = 'email']")
             email_input.clear()
             email_input.send_keys(test_email)
@@ -58,6 +57,25 @@ class forgotPasswordTest:
 
         except Exception as e:
             print(f"❌ Input text test failed: {e}")
+
+    def inputPassword(self):
+
+        try:
+
+            test_password = "123abc@"
+
+            password_input = self.driver.find_element(By.CSS_SELECTOR, "form div:nth-child(2) input")
+            password_input.clear()
+            password_input.send_keys(test_password)
+
+            entered_pw = password_input.get_attrubute("value")
+
+            assert entered_pw == test_password, f"Expected '{test_password}', got '{entered_pw}'"
+            print("✅password input successful")
+
+        except Exception as e:
+            print(f"❌ Input password test failed: {e}")
+
 
 
     def run_all_tests(self):
@@ -72,9 +90,11 @@ class forgotPasswordTest:
             self.clickingForgotPW()
             print("-" *60)
 
-            self.inputEmailandPassword()
+            self.inputEmail()
             print("-" * 60)
 
+            self.inputPassword()
+            print("-" * 60)
 
         except Exception as e:
             print(f"💥 Test suite failed: {e}")
