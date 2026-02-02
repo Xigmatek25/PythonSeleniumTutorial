@@ -93,6 +93,7 @@ class forgotPasswordTest:
 
 
 
+
     def run_all_tests(self):
         """Run all tests in sequence"""
         print("🚀 Starting Selenium automation tests for forgot password page...")
