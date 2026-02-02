@@ -20,11 +20,13 @@ for country in countries:
     if country.text == "Slovenia":
         country.click()
         break
- 
-#assert country_search.text == "Slovenia"
-#print(f"PASSED! {counyt_search} is selected")
+
+selected_country = country_search.get_attribute("value")
+assert selected_country == "Colombia"
+print(f"PASSED! {selected_country} is selected")
 
 #raise Exception(f"Test failed: Expected 'Slovenia', got '{country_search.text}'")
 
-print(country_search.text)
+
+
 time.sleep(2)   
