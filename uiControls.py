@@ -18,5 +18,17 @@ for option in options:
         option.click()
         break
 
+hideExample = driver.find_element(By.ID, "displayed-text")
+
+driver.find_element(By.ID, "hide-textbox").click()
+
+"""This should return error since field was hide on previous line/command"""
+assert hideExample.is_displayed()
+
+
+
+
+
+
 time.sleep(2)
 
