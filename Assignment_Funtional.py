@@ -60,9 +60,7 @@ driver.find_element(By.CLASS_NAME, "promoCode").send_keys("rahulshettyacademy")
 driver.find_element(By.CLASS_NAME, "promoBtn").click()
 
 wait = WebDriverWait(driver, 10)
-
 wait.until(EC.presence_of_element_located((By.CLASS_NAME, "promoInfo")))
-
 promoText = driver.find_element(By.CLASS_NAME, "promoInfo").text
 
 #SCENARIO: CHECK PROMO IS APPLIED
